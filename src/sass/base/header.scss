@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  margin-left: -25px;
+}
+
+.img-burger-top {
+  position: absolute;
+  margin: -15px 0 0 -20px;
+  width: 170%;
+  height: 600%;
+  background-image: url('/public/images/burgertop.jpg');
+  background-size: cover;
+  border-radius: 100%;
+
+  &-drive {
+    animation-name: img-burger-top-drive;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+    @keyframes img-burger-top-drive {
+      100% {
+        opacity: 0;
+        margin-top: 100%;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.img-header_hide {
+  width: 20%;
+  height: 90%;
+  background-image: url('/public/images/minion.png');
+  background-size: cover;
+  opacity: 0;
+
+  @media (max-width: 1300px) {
+    &_hide {
+      opacity: 0;
+    }
+  }
+}
+
+.img-header_active {
+  opacity: 1;
+  transition: 1s;
+
+  @media (max-width: 1300px) {
+    & {
+      opacity: 0;
+    }
+  }
+}

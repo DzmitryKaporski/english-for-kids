@@ -1,0 +1,111 @@
+.switch-box {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 75%;
+  height: 100px;
+  width: 100%;
+  perspective: 600px;
+}
+
+@media (max-width: 900px) {
+  .switch-box {
+    padding: 0 0 0 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .switch-box {
+    padding: 0 0 0 55%;
+  }
+}
+
+@media (max-width: 500px) {
+  .switch-box {
+    padding: 0 0 0 35%;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 46px;
+    left: 5px;
+    bottom: 4px;
+    background-image: url('/public/images/switch.jpg');
+    background-size: cover;
+    transition: .4s;
+  }
+}
+
+input:checked+.slider {
+  width: 185%;
+  background-color: red;
+  box-shadow: 0 0 10px red;
+}
+
+input:focus+.slider {
+  width: 185%;
+  outline: none;
+}
+
+input:checked+.slider:before {
+  left: 35px;
+  transform: translateX(26px);
+  text-align: right;
+}
+
+.slider.round {
+  width: 185%;
+  border-radius: 10px;
+  background-color: orange;
+  box-shadow: 0 0 10px orange;
+  padding-top: 2px;
+
+  &:before {
+    border-radius: 25%;
+  }
+}
+
+.mode-train {
+  position: absolute;
+  font-size: 23px;
+  font-weight: bold;
+  color: orange;
+  padding-left: 3px;
+  transition: .5s;
+}
+
+.mode-play {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+  margin-left: 57px;
+}
+
+.hide {
+  opacity: 0;
+}

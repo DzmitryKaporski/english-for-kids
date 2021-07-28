@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.title {
+  text-shadow: 1px 1px 4px black;
+}
+
+.winner,
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-img-adaptive,
+  &-img-adaptive {
+
+    width: 40%;
+    height: 30%;
+
+    .style-message {
+      font-size: auto;
+      color: orange;
+      background: rgba(255, 255, 255, 0);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+  }
+}

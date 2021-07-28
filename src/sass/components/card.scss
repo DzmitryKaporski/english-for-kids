@@ -1,0 +1,204 @@
+.title {
+  height: 56px;
+  font-size: 2.5rem;
+  color: red;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 295px;
+  height: 240px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  perspective: 750px;
+
+  .front,
+  .back {
+    overflow: hidden;
+    position: absolute;
+    height: 240px;
+    width: 300px;
+    border: 0.5px solid red;
+    border-radius: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .8s;
+    backface-visibility: hidden;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 0px 20px 2px red;
+    }
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 205px;
+    width: 100%;
+  }
+}
+
+.cat-card {
+  width: 295px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+  background: url('/public/images/background.jpg');
+  background-size: cover;
+  cursor: pointer;
+  transition: .5s;
+
+  img {
+    margin-top: 10px;
+    border: 6px solid white;
+    border-radius: 50%;
+    width: 70%;
+    height: 190px;
+    transition: .3s;
+    animation: borderAnimation 5s ease-in-out infinite;
+  }
+
+  &__title {
+    margin-top: 5px;
+    color: white;
+  }
+
+  @-webkit-keyframes borderAnimation {
+
+    from,
+    to {
+      border: 6px solid rgb(0, 255, 255);
+    }
+
+    50% {
+      border: 6px solid rgb(43, 255, 0);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px red;
+    background: url('/public/images/gold.jpg');
+    background-size: cover;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.card-game {
+  position: relative;
+  width: 295px;
+  height: 200px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  perspective: 750px;
+
+  .front,
+  .back {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 295px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .43s;
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 0px 20px orange;
+    }
+
+    &-off {
+      filter: saturate(0.1);
+
+      &:hover {
+        transform: scale(1);
+        box-shadow: none;
+        cursor: default;
+      }
+    }
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-top: 183px;
+    width: 100%;
+    background: #fff;
+    padding: 7px 0 9px;
+  }
+}
+
+.cat-card-game {
+  width: 295px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+  background: url('/public/images/gold.jpg');
+  background-size: cover;
+  cursor: pointer;
+  transition: .5s;
+
+  img {
+    margin-top: 10px;
+    border: 6px solid white;
+    border-radius: 50%;
+    width: 70%;
+    height: 190px;
+  }
+
+  &__title {
+    margin-top: 5px;
+    color: white;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px 5px rgba(219, 112, 147, 0.75);
+    background: url('/public/images/background.jpg');
+    background-size: cover;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.rotate {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: 58px;
+  background-position: 0 10px;
+  bottom: -3px;
+  right: -1px;
+}
