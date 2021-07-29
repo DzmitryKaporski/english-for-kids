@@ -38,7 +38,7 @@ const cards: any = [
     },
     {
       word: 'count',
-      translation: 'обнимать',
+      translation: 'считать',
       image: 'images/count.jpg',
     },
   ],
