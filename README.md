@@ -2,7 +2,7 @@
 2. Screenshot laptop: ![ ](https://clck.ru/VjXsD)
 Screenshot mobile phone:  
 ![ ](https://clck.ru/VjZDP)_![ ](https://clck.ru/VjZEx)
-3. Deploy: https://rolling-scopes-school.github.io/dzmitrykaporski-JSFE2021Q1/dist/
+3. Deploy: https://dzmitrykaporski-jsfe2021q1-english-for-kids.surge.sh/
 4. Done 2021-06-17  / Deadline: 2021-06-30 
 5. Score:  310 / 360
 6. Критерии оценки:
