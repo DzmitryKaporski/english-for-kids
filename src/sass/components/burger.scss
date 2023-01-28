@@ -1,0 +1,115 @@
+#menuToggle {
+  display: block;
+  position: relative;
+  left: 115px;
+  z-index: 1;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px black;
+
+  @media (max-width: 410px) {
+    left: 60px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.2s ease;
+  }
+
+  & li {
+    transition: .2s;
+  }
+
+  & li:hover {
+    transform: scale(1.2);
+  }
+
+  & input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  & span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: red;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+    box-shadow: 1px 1px 4px red;
+
+  }
+
+  & span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  & span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  & input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: red;
+  }
+
+  & input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  & input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  & input:checked~ul {
+    transform: none;
+  }
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  height: 770px;
+  margin: -100px 0 0 -100px;
+  padding: 75px;
+  padding-top: 200px;
+  box-shadow: 2px 2px 10px 1px rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  @media (max-width: 410px) {
+    margin: -100px 0 0 -75px;
+  }
+
+  & li {
+    padding: 7px 0;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+.img-for-burger {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  margin: 0 0 0 -80px;
+  background-image: url('/public/images/burger.jpg');
+  background-size: cover;
+}

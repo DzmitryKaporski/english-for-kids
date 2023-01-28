@@ -1,0 +1,83 @@
+.btn-container {
+  text-align: center;
+}
+
+.start-btn {
+  padding: 20px 50px;
+  background: orange;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: .3s;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 2px orange;
+  }
+}
+
+.repeat-btn {
+  display: none;
+  padding: 40px;
+  background: orange;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: .3s;
+  outline: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+
+  &:hover {
+    box-shadow: 0px 0px 20px 2px orange;
+  }
+}
+
+.repeat-btn-active {
+  display: none;
+  padding: 39px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: .3s;
+  outline: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+}
+
+.resetBtn,
+.trainBtn {
+  font-size: 2rem;
+  padding: 3px 10px;
+  background: orange;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .2s;
+
+  @media (max-width: 400px) {
+    font-size: 1rem;
+    width: 43%;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 20px 2px orange;
+  }
+}
+
+.resetBtn {
+  @media (max-width: 400px) {
+    font-size: 1.4rem;
+    padding: 7px;
+  }
+}
